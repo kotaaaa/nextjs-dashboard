@@ -40,10 +40,6 @@ export async function createInvoice(prevState: State, formData: FormData) {
   });
 
   // If form validation fails, return errors early. Otherwise, continue.
-  console.log(
-    'validatedFields???',
-    validatedFields.error?.flatten().fieldErrors,
-  );
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
